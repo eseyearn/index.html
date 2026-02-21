@@ -1,24 +1,77 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SUPER MASTER 50+ TOOLS | AMIR HAMZA</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SUPER MASTER TOOLS - ULTIMATE</title>
 
 <style>
-body{margin:0;font-family:'Poppins',sans-serif;background:#0f172a;color:white;text-align:center}
-header{background:#111827;padding:15px;font-weight:600;font-size:20px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:12px;padding:15px}
-.card{background:#1e293b;padding:12px;border-radius:15px;cursor:pointer;font-size:13px;transition:.3s}
-.card:hover{background:#00c6ff}
-.section{display:none;padding:20px}
-input,textarea,select{padding:8px;margin:5px;border-radius:8px;border:none;width:80%}
-button{padding:8px 15px;border:none;border-radius:8px;background:#00c6ff;color:white}
-.footer{background:#111827;padding:15px;margin-top:20px;font-size:14px}
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#0f172a,#020617);
+color:white;
+text-align:center;
+}
+header{
+padding:15px;
+background:#111827;
+font-weight:bold;
+}
+.page{
+display:none;
+padding:20px;
+}
+.active{
+display:block;
+}
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+margin-top:20px;
+}
+.card{
+background:#1e293b;
+padding:15px;
+border-radius:12px;
+cursor:pointer;
+}
+button{
+padding:10px 20px;
+border:none;
+border-radius:8px;
+background:#00c6ff;
+color:white;
+margin-top:10px;
+}
+.adbox{
+margin:15px 0;
+padding:15px;
+background:#111827;
+border-radius:10px;
+}
+.stickyAd{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#111827;
+padding:10px;
+z-index:999;
+}
+footer{
+margin-top:60px;
+padding:15px;
+background:#111827;
+font-size:13px;
+}
+.social a{
+color:#00c6ff;
+margin:0 5px;
+text-decoration:none;
+}
 </style>
 </head>
-
 <body>
 
 <header>
@@ -26,177 +79,103 @@ button{padding:8px 15px;border:none;border-radius:8px;background:#00c6ff;color:w
 <br>Developer AMIR HAMZA
 </header>
 
+<!-- HOME PAGE -->
+<div id="home" class="page active">
+
+<div class="adbox">
+<script> atOptions = {'key':'2c315d711f36c4e1708a3dda9be62807','format':'iframe','height':90,'width':728,'params':{}};</script>
+<script src="https://www.highperformanceformat.com/2c315d711f36c4e1708a3dda9be62807/invoke.js"></script>
+</div>
+
+<h2>Welcome To Premium Tools</h2>
+<button onclick="showPage('tools')">Enter Tools</button>
+
+</div>
+
+<!-- TOOLS PAGE -->
+<div id="tools" class="page">
+
+<div class="adbox">
+<script async="async" data-cfasync="false" src="https://pl28764021.effectivegatecpm.com/0b4ca3dfc0212eeea234d78044b2e089/invoke.js"></script>
+<div id="container-0b4ca3dfc0212eeea234d78044b2e089"></div>
+</div>
+
+<h2>Choose Tool</h2>
+
 <div class="grid">
+<div class="card" onclick="triggerReward()">Calculator</div>
+<div class="card" onclick="triggerReward()">Password</div>
+<div class="card" onclick="triggerReward()">Word Counter</div>
+<div class="card" onclick="triggerReward()">Random</div>
+</div>
 
-<div class="card" onclick="show('calc')">Calculator</div>
-<div class="card" onclick="show('age')">Age</div>
-<div class="card" onclick="show('bmi')">BMI</div>
-<div class="card" onclick="show('emi')">EMI</div>
-<div class="card" onclick="show('gst')">GST</div>
-<div class="card" onclick="show('discount')">Discount</div>
-<div class="card" onclick="show('percent')">Percentage</div>
-<div class="card" onclick="show('loan')">Loan</div>
-
-<div class="card" onclick="show('word')">Word Counter</div>
-<div class="card" onclick="show('char')">Char Counter</div>
-<div class="card" onclick="show('reverse')">Reverse</div>
-<div class="card" onclick="show('case')">Case Convert</div>
-<div class="card" onclick="show('slug')">Slug</div>
-<div class="card" onclick="show('base64')">Base64</div>
-<div class="card" onclick="show('uuid')">UUID</div>
-<div class="card" onclick="show('timestamp')">Timestamp</div>
-
-<div class="card" onclick="show('random')">Random</div>
-<div class="card" onclick="show('pass')">Password</div>
-<div class="card" onclick="show('color')">Color</div>
-<div class="card" onclick="show('qr')">QR</div>
-<div class="card" onclick="show('binary')">Binary</div>
-<div class="card" onclick="show('note')">Notepad</div>
-<div class="card" onclick="show('timer')">Timer</div>
-<div class="card" onclick="show('stopwatch')">Stopwatch</div>
+<br>
+<button onclick="showPage('home')">⬅ Back</button>
 
 </div>
 
-<!-- TOOL SECTIONS -->
+<!-- REWARD PAGE -->
+<div id="reward" class="page">
 
-<div id="calc" class="section">
-<h3>Calculator</h3>
-<input id="n1"><input id="n2">
-<button onclick="calc()">Add</button>
-<p id="out"></p>
+<div class="adbox">
+<script src="https://pl28764018.effectivegatecpm.com/db/ae/86/dbae860c34bd2584045c04e858a7885b.js"></script>
 </div>
 
-<div id="age" class="section">
-<h3>Age</h3>
-<input type="date" id="dob">
-<button onclick="age()">Calc</button>
-<p id="ageOut"></p>
+<h3 id="timer">Click Start</h3>
+<button onclick="startTimer()">Start Timer</button>
+
+<br><br>
+<button onclick="showPage('tools')">⬅ Back</button>
+
 </div>
 
-<div id="bmi" class="section">
-<h3>BMI</h3>
-<input id="w"><input id="h">
-<button onclick="bmi()">Calc</button>
-<p id="bmiOut"></p>
+<!-- STICKY FOOTER AD -->
+<div class="stickyAd">
+<script src="https://pl28764009.effectivegatecpm.com/88/9f/d0/889fd0e78a836626363de1ffb8c7293a.js"></script>
 </div>
 
-<div id="word" class="section">
-<h3>Word Counter</h3>
-<textarea id="text"></textarea>
-<button onclick="word()">Count</button>
-<p id="wordOut"></p>
+<footer>
+
+<div class="social">
+<a href="#">Facebook</a> |
+<a href="#">Telegram</a> |
+<a href="#">WhatsApp</a>
 </div>
 
-<div id="char" class="section">
-<h3>Character Counter</h3>
-<textarea id="charText"></textarea>
-<button onclick="charCount()">Count</button>
-<p id="charOut"></p>
-</div>
-
-<div id="reverse" class="section">
-<h3>Reverse Text</h3>
-<input id="rev">
-<button onclick="revText()">Reverse</button>
-<p id="revOut"></p>
-</div>
-
-<div id="case" class="section">
-<h3>Case Converter</h3>
-<input id="caseText">
-<button onclick="upper()">UPPER</button>
-<button onclick="lower()">lower</button>
-<p id="caseOut"></p>
-</div>
-
-<div id="pass" class="section">
-<h3>Password</h3>
-<button onclick="pass()">Generate</button>
-<p id="passOut"></p>
-</div>
-
-<div id="random" class="section">
-<h3>Random Number</h3>
-<button onclick="rand()">Generate</button>
-<p id="randOut"></p>
-</div>
-
-<div id="color" class="section">
-<h3>Color Picker</h3>
-<input type="color" id="colorPick">
-<p id="colorOut"></p>
-</div>
-
-<div id="qr" class="section">
-<h3>QR Generator</h3>
-<input id="qrText">
-<button onclick="qr()">Generate</button>
-<div id="qrOut"></div>
-</div>
-
-<div id="binary" class="section">
-<h3>Binary Converter</h3>
-<input id="binText">
-<button onclick="toBinary()">Convert</button>
-<p id="binOut"></p>
-</div>
-
-<div id="uuid" class="section">
-<h3>UUID</h3>
-<button onclick="uuid()">Generate</button>
-<p id="uuidOut"></p>
-</div>
-
-<div id="timestamp" class="section">
-<h3>Timestamp</h3>
-<button onclick="timestamp()">Get</button>
-<p id="timeOut"></p>
-</div>
-
-<div id="note" class="section">
-<h3>Notepad</h3>
-<textarea></textarea>
-</div>
-
-<div id="timer" class="section">
-<h3>Timer (10 sec)</h3>
-<button onclick="timer()">Start</button>
-<p id="timerOut"></p>
-</div>
-
-<div id="stopwatch" class="section">
-<h3>Stopwatch</h3>
-<button onclick="startSW()">Start</button>
-<button onclick="stopSW()">Stop</button>
-<p id="swOut">0</p>
-</div>
-
-<div class="footer">
-Facebook | Telegram | WhatsApp  
 <br>© 2026 AMIR HAMZA
-</div>
+
+</footer>
 
 <script>
-function show(id){document.querySelectorAll('.section').forEach(s=>s.style.display='none');document.getElementById(id).style.display='block'}
-function calc(){out.innerText=parseFloat(n1.value)+parseFloat(n2.value)}
-function age(){ageOut.innerText=new Date().getFullYear()-new Date(dob.value).getFullYear()}
-function bmi(){bmiOut.innerText=(w.value/(h.value*h.value)).toFixed(2)}
-function word(){wordOut.innerText=text.value.trim().split(/\s+/).length}
-function charCount(){charOut.innerText=charText.value.length}
-function revText(){revOut.innerText=rev.value.split("").reverse().join("")}
-function upper(){caseOut.innerText=caseText.value.toUpperCase()}
-function lower(){caseOut.innerText=caseText.value.toLowerCase()}
-function pass(){passOut.innerText=Math.random().toString(36).slice(-10)}
-function rand(){randOut.innerText=Math.floor(Math.random()*10000)}
-colorPick.addEventListener("input",()=>colorOut.innerText=colorPick.value)
-function qr(){qrOut.innerHTML="<img src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+qrText.value+"'>"}
-function toBinary(){binOut.innerText=[...binText.value].map(x=>x.charCodeAt(0).toString(2)).join(" ")}
-function uuid(){uuidOut.innerText=crypto.randomUUID()}
-function timestamp(){timeOut.innerText=Date.now()}
-function timer(){let t=10;timerOut.innerText=t;let i=setInterval(()=>{t--;timerOut.innerText=t;if(t==0)clearInterval(i)},1000)}
-let sw=0,interval
-function startSW(){interval=setInterval(()=>{sw++;swOut.innerText=sw},1000)}
-function stopSW(){clearInterval(interval)}
+
+function showPage(id){
+document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+window.scrollTo(0,0);
+}
+
+/* Pop Trigger Once */
+function triggerReward(){
+showPage('reward');
+if(!localStorage.getItem("popShown")){
+localStorage.setItem("popShown","yes");
+window.open("https://www.effectivegatecpm.com/tf7ue455r?key=905a97bdf8c5cacc589679acb64b13ef");
+}
+}
+
+let time=8;
+function startTimer(){
+time=8;
+let interval=setInterval(function(){
+document.getElementById("timer").innerText="Wait "+time+" sec";
+time--;
+if(time<0){
+clearInterval(interval);
+document.getElementById("timer").innerText="Unlocked ✅";
+}
+},1000);
+}
+
 </script>
 
 </body>
