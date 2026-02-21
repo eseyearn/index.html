@@ -3,162 +3,228 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SUPER TOOLS HUB</title>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<title>Super 50+ Tools | AMIR HAMZA</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
-body{margin:0;font-family:Arial;background:#0f172a;color:white;text-align:center}
-header{background:#1e293b;padding:15px;font-size:22px;font-weight:bold}
-.tool-box{background:#1e293b;margin:15px;padding:15px;border-radius:10px}
-input,button,textarea{padding:8px;margin:5px;border-radius:5px;border:none}
-button{background:#0ea5e9;color:white;cursor:pointer}
-footer{background:#1e293b;padding:15px;margin-top:20px}
-.social i{font-size:22px;margin:10px;color:white}
-.ad-box{margin:15px 0;padding:10px;background:#111827}
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:#0f172a;
+color:white;
+text-align:center;
+}
+header{
+padding:15px;
+font-size:20px;
+font-weight:600;
+background:#111827;
+}
+.search{
+margin:15px;
+}
+.search input{
+padding:10px;
+width:70%;
+border-radius:20px;
+border:none;
+}
+.search button{
+padding:10px;
+border:none;
+border-radius:20px;
+background:#00c6ff;
+color:white;
+}
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(100px,1fr));
+gap:15px;
+padding:20px;
+}
+.card{
+background:#1e293b;
+padding:15px;
+border-radius:15px;
+cursor:pointer;
+transition:.3s;
+font-size:13px;
+}
+.card:hover{
+background:#00c6ff;
+}
+.section{
+display:none;
+padding:20px;
+}
+input,textarea{
+padding:8px;
+margin:5px;
+border-radius:8px;
+border:none;
+width:80%;
+}
+button{
+padding:8px 15px;
+border:none;
+border-radius:8px;
+background:#00c6ff;
+color:white;
+}
+.footer{
+margin-top:20px;
+padding:15px;
+background:#111827;
+font-size:14px;
+}
 </style>
 </head>
+
 <body>
 
-<header>⚡ SUPER REALTIME TOOLS - AMIR HAMZA</header>
+<header>
+🚀 SUPER 50+ TOOLS  
+<br>Developer AMIR HAMZA
+</header>
 
-<!-- ====== ADS START ====== -->
-
-<script src="https://pl28764009.effectivegatecpm.com/88/9f/d0/889fd0e78a836626363de1ffb8c7293a.js"></script>
-
-<script src="https://pl28764018.effectivegatecpm.com/db/ae/86/dbae860c34bd2584045c04e858a7885b.js"></script>
-
-<script async data-cfasync="false" src="https://pl28764021.effectivegatecpm.com/0b4ca3dfc0212eeea234d78044b2e089/invoke.js"></script>
-<div id="container-0b4ca3dfc0212eeea234d78044b2e089"></div>
-
-<script>
-atOptions = {
-'key' : '2c315d711f36c4e1708a3dda9be62807',
-'format' : 'iframe',
-'height' : 90,
-'width' : 728,
-'params' : {}
-};
-</script>
-<script src="https://www.highperformanceformat.com/2c315d711f36c4e1708a3dda9be62807/invoke.js"></script>
-
-<!-- Direct Link Auto -->
-<script>
-setTimeout(function(){
-window.open("https://www.effectivegatecpm.com/tf7ue455r?key=905a97bdf8c5cacc589679acb64b13ef","_blank");
-},8000);
-</script>
-
-<!-- ====== ADS END ====== -->
-
-<div class="tool-box">
-<h3><i class="fa fa-search"></i> Google Search</h3>
-<input type="text" id="search">
-<button onclick="window.open('https://www.google.com/search?q='+search.value)">Search</button>
+<div class="search">
+<form action="https://www.google.com/search" method="GET" target="_blank">
+<input type="text" name="q" placeholder="Search Google...">
+<button>Search</button>
+</form>
 </div>
 
-<div class="tool-box">
-<h3><i class="fa fa-image"></i> Image to Base64</h3>
-<input type="file" id="imgInput">
-<textarea id="imgOutput" rows="3" style="width:100%"></textarea>
+<div class="grid">
+
+<div class="card" onclick="show('calc')">Calculator</div>
+<div class="card" onclick="show('age')">Age</div>
+<div class="card" onclick="show('bmi')">BMI</div>
+<div class="card" onclick="show('emi')">EMI</div>
+<div class="card" onclick="show('word')">Word Counter</div>
+<div class="card" onclick="show('pass')">Password</div>
+<div class="card" onclick="show('qr')">QR</div>
+<div class="card" onclick="show('color')">Color Picker</div>
+<div class="card" onclick="show('reverse')">Text Reverse</div>
+<div class="card" onclick="show('random')">Random Number</div>
+
 </div>
 
-<div class="tool-box">
-<h3><i class="fa fa-qrcode"></i> QR Generator</h3>
-<input type="text" id="qrText">
-<button onclick="qr()">Generate</button>
-<div id="qrResult"></div>
+<!-- WORKING TOOLS -->
+
+<div id="calc" class="section">
+<h3>Calculator</h3>
+<input id="n1" placeholder="Number 1">
+<input id="n2" placeholder="Number 2">
+<button onclick="calculate()">Add</button>
+<p id="calcOut"></p>
 </div>
 
-<div class="tool-box">
-<h3><i class="fa fa-key"></i> Password Generator</h3>
-<button onclick="genPass()">Generate Password</button>
-<p id="pass"></p>
-</div>
-
-<div class="tool-box">
-<h3><i class="fa fa-calculator"></i> Age Calculator</h3>
+<div id="age" class="section">
+<h3>Age Calculator</h3>
 <input type="date" id="dob">
-<button onclick="calcAge()">Calculate</button>
-<p id="ageResult"></p>
+<button onclick="ageCalc()">Calculate</button>
+<p id="ageOut"></p>
 </div>
 
-<div class="tool-box">
-<h3><i class="fa fa-money-bill"></i> EMI Calculator</h3>
-<input type="number" id="loan" placeholder="Loan Amount">
-<input type="number" id="rate" placeholder="Interest %">
-<input type="number" id="months" placeholder="Months">
+<div id="bmi" class="section">
+<h3>BMI</h3>
+<input id="w" placeholder="Weight kg">
+<input id="h" placeholder="Height m">
+<button onclick="bmiCalc()">Calculate</button>
+<p id="bmiOut"></p>
+</div>
+
+<div id="emi" class="section">
+<h3>EMI</h3>
+<input id="loan" placeholder="Loan">
+<input id="rate" placeholder="Interest %">
+<input id="months" placeholder="Months">
 <button onclick="emiCalc()">Calculate</button>
-<p id="emiResult"></p>
+<p id="emiOut"></p>
 </div>
 
-<div class="tool-box">
-<h3><i class="fa fa-font"></i> Word Counter</h3>
-<textarea id="textInput" rows="3" style="width:100%"></textarea>
-<button onclick="countWords()">Count</button>
-<p id="wordResult"></p>
+<div id="word" class="section">
+<h3>Word Counter</h3>
+<textarea id="text"></textarea>
+<button onclick="wordCount()">Count</button>
+<p id="wordOut"></p>
 </div>
 
-<div class="tool-box">
-<h3><i class="fa fa-volume-up"></i> Text to Speech</h3>
-<input type="text" id="ttsText">
-<button onclick="speak()">Speak</button>
+<div id="pass" class="section">
+<h3>Password Generator</h3>
+<button onclick="genPass()">Generate</button>
+<p id="passOut"></p>
 </div>
 
-<footer>
-<p>Developer: <b>AMIR HAMZA</b></p>
-<div class="social">
-<a href="#"><i class="fab fa-facebook"></i></a>
-<a href="#"><i class="fab fa-telegram"></i></a>
-<a href="#"><i class="fab fa-whatsapp"></i></a>
+<div id="qr" class="section">
+<h3>QR Generator</h3>
+<input id="qrText">
+<button onclick="qrGen()">Generate</button>
+<div id="qrOut"></div>
 </div>
-</footer>
+
+<div id="color" class="section">
+<h3>Color Picker</h3>
+<input type="color" id="colorPick">
+<p id="colorOut"></p>
+</div>
+
+<div id="reverse" class="section">
+<h3>Text Reverse</h3>
+<input id="revText">
+<button onclick="reverseText()">Reverse</button>
+<p id="revOut"></p>
+</div>
+
+<div id="random" class="section">
+<h3>Random Number</h3>
+<button onclick="randNum()">Generate</button>
+<p id="randOut"></p>
+</div>
+
+<div class="footer">
+Facebook | Telegram | WhatsApp  
+<br>© 2026 AMIR HAMZA
+</div>
 
 <script>
-
-document.getElementById("imgInput").addEventListener("change",function(){
-let reader=new FileReader();
-reader.onload=function(){
-imgOutput.value=reader.result;
-};
-reader.readAsDataURL(this.files[0]);
-});
-
-function qr(){
-qrResult.innerHTML="<img src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+qrText.value+"'>";
+function show(id){
+document.querySelectorAll('.section').forEach(s=>s.style.display='none');
+document.getElementById(id).style.display='block';
+window.scrollTo(0,600);
 }
-
-function genPass(){
-let chars="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-let pass="";
-for(let i=0;i<12;i++){pass+=chars.charAt(Math.floor(Math.random()*chars.length));}
-document.getElementById("pass").innerText=pass;
+function calculate(){
+calcOut.innerText=parseFloat(n1.value)+parseFloat(n2.value);
 }
-
-function calcAge(){
-let birth=new Date(dob.value);
-let age=new Date().getFullYear()-birth.getFullYear();
-ageResult.innerText="Age: "+age+" years";
+function ageCalc(){
+let d=new Date(dob.value);
+ageOut.innerText=new Date().getFullYear()-d.getFullYear();
 }
-
+function bmiCalc(){
+bmiOut.innerText=(w.value/(h.value*h.value)).toFixed(2);
+}
 function emiCalc(){
-let P=loan.value;
-let R=rate.value/1200;
-let N=months.value;
+let P=loan.value,R=rate.value/1200,N=months.value;
 let EMI=(P*R*Math.pow(1+R,N))/(Math.pow(1+R,N)-1);
-emiResult.innerText="Monthly EMI: "+EMI.toFixed(2);
+emiOut.innerText=EMI.toFixed(2);
 }
-
-function countWords(){
-let text=textInput.value.trim();
-let words=text.split(/\s+/).length;
-wordResult.innerText="Words: "+words;
+function wordCount(){
+wordOut.innerText=text.value.trim().split(/\s+/).length;
 }
-
-function speak(){
-let msg=new SpeechSynthesisUtterance(ttsText.value);
-speechSynthesis.speak(msg);
+function genPass(){
+passOut.innerText=Math.random().toString(36).slice(-10);
 }
-
+function qrGen(){
+qrOut.innerHTML="<img src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+qrText.value+"'>";
+}
+colorPick.addEventListener("input",()=>colorOut.innerText=colorPick.value);
+function reverseText(){
+revOut.innerText=revText.value.split("").reverse().join("");
+}
+function randNum(){
+randOut.innerText=Math.floor(Math.random()*1000);
+}
 </script>
 
 </body>
