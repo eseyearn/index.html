@@ -3,175 +3,115 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pro All In One Free Online Tools</title>
+<title>Amir Tools - Free Online Tools & Converters</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<!-- SEO -->
+<meta name="description" content="Free online tools: Image to PDF, JPG to PNG, QR Generator, EMI Calculator, Age Calculator, Word Counter and more.">
+<meta name="keywords" content="online tools, image to pdf, jpg to png, qr generator, emi calculator, free converter">
+<meta name="author" content="Amir Hamza">
+<meta name="robots" content="index, follow">
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-body{
-margin:0;
-font-family:Poppins,sans-serif;
-background:#0f172a;
-color:#fff;
-}
-header{
-background:#111827;
-padding:15px;
-text-align:center;
-font-size:20px;
-font-weight:600;
-}
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:15px;
-padding:20px;
-}
-.card{
-background:#1e293b;
-padding:18px;
-border-radius:10px;
-text-align:center;
-cursor:pointer;
-transition:0.3s;
-}
-.card:hover{
-background:#2563eb;
-}
-.section{
-display:none;
-padding:20px;
-}
-input,textarea,button{
-width:100%;
-padding:10px;
-margin-top:10px;
-border:none;
-border-radius:6px;
-}
-button{
-background:#2563eb;
-color:white;
-font-weight:600;
-cursor:pointer;
-}
-canvas,img,video{
-width:100%;
-margin-top:10px;
-}
-.ad{
-background:#1e293b;
-padding:15px;
-text-align:center;
-margin:10px;
-}
-footer{
-background:#111827;
-text-align:center;
-padding:15px;
-margin-top:20px;
-}
+body{margin:0;font-family:Arial;background:#0f172a;color:white}
+header{background:#111827;padding:18px;text-align:center;font-size:22px;font-weight:bold}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:15px;padding:20px}
+.card{background:#1f2937;padding:20px;border-radius:14px;text-align:center;cursor:pointer;transition:.3s}
+.card:hover{background:#374151;transform:translateY(-4px)}
+.card i{font-size:28px;margin-bottom:8px;color:#22d3ee}
+.section{display:none;padding:20px}
+input,textarea,button{width:100%;max-width:500px;padding:10px;margin:6px 0;border:none;border-radius:8px}
+button{background:#22d3ee;color:black;font-weight:bold;cursor:pointer}
+footer{text-align:center;padding:15px;background:#111827;margin-top:20px}
+.ad{text-align:center;margin:15px 0}
+img{max-width:100%}
 </style>
 </head>
 <body>
 
-<header>Pro All In One Free Online Tools</header>
+<header>🚀 Amir Tools - Free Online Tools</header>
 
+<!-- TOP HIGH CPM AD -->
 <div class="ad">
-<!-- Adsterra Code Paste Here -->
-Advertisement Space
+<script>
+atOptions = {
+'key' : '2c315d711f36c4e1708a3dda9be62807',
+'format' : 'iframe',
+'height' : 90,
+'width' : 728,
+'params' : {}
+};
+</script>
+<script src="https://www.highperformanceformat.com/2c315d711f36c4e1708a3dda9be62807/invoke.js"></script>
 </div>
 
 <div class="grid">
-<div class="card" onclick="show('imgpdf')">Image to PDF</div>
-<div class="card" onclick="show('imgconvert')">JPG to PNG</div>
-<div class="card" onclick="show('password')">Password</div>
-<div class="card" onclick="show('qr')">QR Code</div>
-<div class="card" onclick="show('age')">Age</div>
-<div class="card" onclick="show('emi')">EMI</div>
-<div class="card" onclick="show('word')">Word Counter</div>
-<div class="card" onclick="show('tts')">Text to Speech</div>
-<div class="card" onclick="show('yt')">YT Thumbnail</div>
-<div class="card" onclick="show('video')">Video Preview</div>
+<div class="card" onclick="show('pass')"><i class="fa fa-key"></i><br>Password Generator</div>
+<div class="card" onclick="show('age')"><i class="fa fa-calendar"></i><br>Age Calculator</div>
+<div class="card" onclick="show('emi')"><i class="fa fa-calculator"></i><br>EMI Calculator</div>
+<div class="card" onclick="show('qr')"><i class="fa fa-qrcode"></i><br>QR Generator</div>
+<div class="card" onclick="show('word')"><i class="fa fa-font"></i><br>Word Counter</div>
+<div class="card" onclick="show('thumb')"><i class="fa fa-youtube"></i><br>YT Thumbnail</div>
 </div>
 
-<!-- Sections -->
-
-<div id="imgpdf" class="section">
-<h2>Image to PDF</h2>
-<input type="file" id="imgFile">
-<button onclick="convertPDF()">Download PDF</button>
+<!-- MIDDLE AD -->
+<div class="ad">
+<script async data-cfasync="false" src="https://pl28764021.effectivegatecpm.com/0b4ca3dfc0212eeea234d78044b2e089/invoke.js"></script>
+<div id="container-0b4ca3dfc0212eeea234d78044b2e089"></div>
 </div>
 
-<div id="imgconvert" class="section">
-<h2>JPG to PNG</h2>
-<input type="file" id="imgInput">
-<canvas id="canvas"></canvas>
-<button onclick="downloadPNG()">Download PNG</button>
-</div>
+<!-- TOOLS -->
 
-<div id="password" class="section">
-<h2>Password Generator</h2>
-<input type="number" id="passLength" placeholder="Length (8-20)">
-<button onclick="generatePass()">Generate</button>
-<input type="text" id="passOutput" readonly>
-</div>
-
-<div id="qr" class="section">
-<h2>QR Code Generator</h2>
-<input type="text" id="qrText" placeholder="Enter text">
-<button onclick="generateQR()">Generate</button>
-<div id="qrcode"></div>
+<div id="pass" class="section">
+<h3>Password Generator</h3>
+<button onclick="genPass()">Generate</button>
+<p id="passout"></p>
 </div>
 
 <div id="age" class="section">
-<h2>Age Calculator</h2>
-<input type="date" id="birth">
+<h3>Age Calculator</h3>
+<input type="date" id="dob">
 <button onclick="calcAge()">Calculate</button>
-<input type="text" id="ageResult" readonly>
+<p id="ageout"></p>
 </div>
 
 <div id="emi" class="section">
-<h2>EMI Calculator</h2>
+<h3>EMI Calculator</h3>
 <input type="number" id="loan" placeholder="Loan Amount">
-<input type="number" id="rate" placeholder="Interest %">
-<input type="number" id="years" placeholder="Years">
+<input type="number" id="rate" placeholder="Interest Rate %">
+<input type="number" id="time" placeholder="Months">
 <button onclick="calcEMI()">Calculate</button>
-<input type="text" id="emiResult" readonly>
+<p id="emiout"></p>
+</div>
+
+<div id="qr" class="section">
+<h3>QR Generator</h3>
+<input type="text" id="qrtext">
+<button onclick="makeQR()">Generate</button>
+<div id="qrout"></div>
 </div>
 
 <div id="word" class="section">
-<h2>Word Counter</h2>
-<textarea id="text" rows="5"></textarea>
-<input type="text" id="wordResult" readonly>
+<h3>Word Counter</h3>
+<textarea id="wordinput" oninput="countWord()"></textarea>
+<p id="wordout">Words: 0</p>
 </div>
 
-<div id="tts" class="section">
-<h2>Text to Speech</h2>
-<textarea id="ttsText" rows="4"></textarea>
-<button onclick="speak()">Speak</button>
-</div>
-
-<div id="yt" class="section">
-<h2>YouTube Thumbnail Downloader</h2>
-<input type="text" id="ytLink" placeholder hookup="Paste YouTube Link">
+<div id="thumb" class="section">
+<h3>YouTube Thumbnail</h3>
+<input type="text" id="ytlink">
 <button onclick="getThumb()">Get Thumbnail</button>
-<img id="ytImg">
-<a id="ytDownload" style="display:none;" download="thumbnail.jpg">
-<button id="downloadBtn" style="display:none;">Download Thumbnail</button>
-</a>
+<div id="thumbout"></div>
 </div>
 
-<div id="video" class="section">
-<h2>Video Preview</h2>
-<input type="file" id="videoFile">
-<video id="videoPreview" controls></video>
-</div>
+<footer>Developer: Amir Hamza</footer>
 
-<footer>© 2026 Pro Free Online Tools</footer>
+<!-- POP ADS -->
+<script src="https://pl28764018.effectivegatecpm.com/db/ae/86/dbae860c34bd2584045c04e858a7885b.js"></script>
+<script src="https://pl28764009.effectivegatecpm.com/88/9f/d0/889fd0e78a836626363de1ffb8c7293a.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
 <script>
 function show(id){
@@ -179,99 +119,45 @@ document.querySelectorAll('.section').forEach(s=>s.style.display='none');
 document.getElementById(id).style.display='block';
 }
 
-async function convertPDF(){
-const { jsPDF } = window.jspdf;
-let file=imgFile.files[0];
-let reader=new FileReader();
-reader.onload=function(e){
-let pdf=new jsPDF();
-pdf.addImage(e.target.result,'JPEG',10,10,180,160);
-pdf.save("converted.pdf");
-}
-reader.readAsDataURL(file);
-}
-
-imgInput.addEventListener("change",function(e){
-let reader=new FileReader();
-reader.onload=function(ev){
-let img=new Image();
-img.onload=function(){
-canvas.width=img.width;
-canvas.height=img.height;
-canvas.getContext('2d').drawImage(img,0,0);
-}
-img.src=ev.target.result;
-}
-reader.readAsDataURL(e.target.files[0]);
-});
-
-function downloadPNG(){
-let link=document.createElement("a");
-link.download="converted.png";
-link.href=canvas.toDataURL();
-link.click();
-}
-
-function generatePass(){
-let len=passLength.value||12;
-let chars="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%";
-let pass="";
-for(let i=0;i<len;i++){pass+=chars[Math.floor(Math.random()*chars.length)]}
-passOutput.value=pass;
-}
-
-function generateQR(){
-qrcode.innerHTML="";
-new QRCode(qrcode,qrText.value);
+function genPass(){
+document.getElementById("passout").innerText=Math.random().toString(36).slice(-12);
 }
 
 function calcAge(){
-let birth=new Date(document.getElementById('birth').value);
-let diff=new Date()-birth;
-let age=Math.floor(diff/31557600000);
-ageResult.value=age+" Years";
+let dob=new Date(document.getElementById("dob").value);
+let diff=Date.now()-dob.getTime();
+let age=new Date(diff);
+document.getElementById("ageout").innerText=Math.abs(age.getUTCFullYear()-1970)+" Years";
 }
 
 function calcEMI(){
-let p=loan.value;
-let r=rate.value/1200;
-let n=years.value*12;
-let emi=(p*r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
-emiResult.value="EMI: "+emi.toFixed(2);
+let P=document.getElementById("loan").value;
+let r=document.getElementById("rate").value/1200;
+let n=document.getElementById("time").value;
+let emi=(P*r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
+document.getElementById("emiout").innerText="EMI: "+emi.toFixed(2);
 }
 
-text.addEventListener("input",()=>{
-let words=text.value.trim().split(/\s+/).filter(Boolean).length;
-wordResult.value="Words: "+words;
-});
+function makeQR(){
+document.getElementById("qrout").innerHTML="";
+new QRCode(document.getElementById("qrout"),document.getElementById("qrtext").value);
+}
 
-function speak(){
-let msg=new SpeechSynthesisUtterance(ttsText.value);
-speechSynthesis.speak(msg);
+function countWord(){
+let text=document.getElementById("wordinput").value.trim();
+let words=text?text.split(/\s+/).length:0;
+document.getElementById("wordout").innerText="Words: "+words;
 }
 
 function getThumb(){
-let url=ytLink.value.trim();
-let id="";
-if(url.includes("youtu.be/")){
-id=url.split("youtu.be/")[1].split(/[?&]/)[0];
-}else if(url.includes("v=")){
-id=url.split("v=")[1].split("&")[0];
-}
+let url=document.getElementById("ytlink").value;
+let id=url.split("v=")[1];
 if(id){
-let imgUrl="https://img.youtube.com/vi/"+id+"/maxresdefault.jpg";
-ytImg.src=imgUrl;
-ytDownload.href=imgUrl;
-downloadBtn.style.display="block";
-downloadBtn.onclick=function(){ytDownload.click();}
-}else{
-alert("Invalid YouTube Link");
+id=id.split("&")[0];
+let img="https://img.youtube.com/vi/"+id+"/maxresdefault.jpg";
+document.getElementById("thumbout").innerHTML="<img src='"+img+"'><br><a href='"+img+"' download><button>Download</button></a>";
 }
 }
-
-videoFile.addEventListener("change",function(e){
-videoPreview.src=URL.createObjectURL(e.target.files[0]);
-});
 </script>
 
 </body>
