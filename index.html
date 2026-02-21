@@ -3,44 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amir Hamza Tools Hub</title>
+<title>Amir Hamza Premium Tools</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 <style>
-body{margin:0;font-family:Segoe UI;background:#f4f6f9;transition:0.3s;}
-header{background:#0f172a;color:white;padding:15px;text-align:center;font-size:22px;}
-.nav{display:flex;justify-content:center;gap:10px;background:#1e293b;padding:10px;}
-.nav button{background:#2563eb;color:white;border:none;padding:8px 12px;border-radius:5px;}
-.container{padding:20px;}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px;}
-.card{background:white;padding:15px;border-radius:10px;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,0.1);}
-input,textarea{width:100%;padding:8px;margin:6px 0;border-radius:6px;border:1px solid #ccc;}
-button.tool{background:#2563eb;color:white;border:none;padding:8px;border-radius:6px;}
-footer{background:#0f172a;color:white;text-align:center;padding:15px;margin-top:30px;}
-.dark{background:#111;color:white;}
-.dark .card{background:#1e1e1e;color:white;}
-.social{position:fixed;right:10px;top:40%;}
-.social a{display:block;background:#2563eb;color:white;padding:8px;margin:5px 0;text-decoration:none;border-radius:5px;font-size:14px;}
-.sticky-ad{position:fixed;bottom:0;width:100%;background:white;text-align:center;z-index:999;}
-.admin-panel{display:none;background:white;padding:15px;border-radius:10px;margin-top:20px;}
-.ad-box{text-align:center;margin:15px;}
+body{margin:0;font-family:Segoe UI;background:#f4f6f9;}
+header{background:#0f172a;color:white;padding:15px;text-align:center;font-size:20px;font-weight:bold;}
+.container{padding:15px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:15px;}
+.card{background:white;padding:15px;border-radius:12px;text-align:center;box-shadow:0 3px 8px rgba(0,0,0,0.08);}
+.card i{font-size:28px;margin-bottom:8px;color:#2563eb;}
+input,textarea{width:100%;padding:8px;margin:5px 0;border-radius:6px;border:1px solid #ccc;}
+button{background:#2563eb;color:white;border:none;padding:8px;border-radius:6px;margin-top:5px;}
+button:disabled{background:gray;}
+.ad-box{text-align:center;margin:15px 0;}
+footer{background:#0f172a;color:white;text-align:center;padding:12px;margin-top:30px;}
+.social{position:fixed;right:5px;top:40%;}
+.social a{display:block;background:#2563eb;color:white;padding:6px;margin:4px 0;text-decoration:none;border-radius:4px;font-size:13px;}
 </style>
 </head>
 
 <body>
 
-<header>
-Amir Hamza Premium Tools Hub
-<button onclick="toggleDark()" style="float:right;">🌙</button>
-</header>
-
-<div class="nav">
-<button onclick="showTools()">Tools</button>
-<button onclick="showAdmin()">Admin</button>
-</div>
+<header>Amir Hamza Premium Tools Hub</header>
 
 <div class="container">
 
-<!-- 🔥 YOUR TOP BANNER AD -->
+<!-- 🔥 TOP BANNER AD -->
 <div class="ad-box">
 <script>
 atOptions = {
@@ -54,101 +44,80 @@ atOptions = {
 <script src="https://www.highperformanceformat.com/2c315d711f36c4e1708a3dda9be62807/invoke.js"></script>
 </div>
 
-<!-- 🔥 NATIVE AD -->
-<script async="async" data-cfasync="false" src="https://pl28764021.effectivegatecpm.com/0b4ca3dfc0212eeea234d78044b2e089/invoke.js"></script>
-<div id="container-0b4ca3dfc0212eeea234d78044b2e089"></div>
-
-<div id="tools-section">
-
 <h2>Online Tools</h2>
 
 <div class="grid">
 
 <div class="card">
+<i class="fa-solid fa-key"></i>
 <h4>Password Generator</h4>
-<button class="tool" onclick="genPass()">Generate</button>
+<button onclick="genPass()">Generate</button>
 <p id="pass"></p>
 </div>
 
 <div class="card">
+<i class="fa-solid fa-calculator"></i>
 <h4>EMI Calculator</h4>
 <input type="number" id="loan" placeholder="Loan Amount">
 <input type="number" id="rate" placeholder="Interest %">
 <input type="number" id="month" placeholder="Months">
-<button class="tool" onclick="calcEMI()">Calculate</button>
+<button onclick="calcEMI()">Calculate</button>
 <p id="emi"></p>
 </div>
 
 <div class="card">
+<i class="fa-solid fa-qrcode"></i>
 <h4>QR Generator</h4>
 <input type="text" id="qrtext" placeholder="Enter Text">
-<button class="tool" onclick="makeQR()">Generate</button>
+<button onclick="makeQR()">Generate</button>
 <div id="qr"></div>
 </div>
 
 <div class="card">
+<i class="fa-solid fa-file-word"></i>
 <h4>Word Counter</h4>
 <textarea id="wordtext"></textarea>
-<button class="tool" onclick="countWord()">Count</button>
+<button onclick="countWord()">Count</button>
 <p id="wordcount"></p>
 </div>
 
 <div class="card">
+<i class="fa-brands fa-google"></i>
 <h4>Google Search</h4>
 <input type="text" id="search">
-<button class="tool" onclick="goSearch()">Search</button>
+<button onclick="goSearch()">Search</button>
 </div>
 
 <div class="card">
+<i class="fa-solid fa-image"></i>
 <h4>JPG to PNG</h4>
 <input type="file" accept="image/*" onchange="convertPNG(event)">
 <a id="downloadPNG"></a>
 </div>
 
 <div class="card">
+<i class="fa-solid fa-clock"></i>
 <h4>Ad Timer Unlock</h4>
 <p id="adTimer">Click Start</p>
-<button class="tool" onclick="startAdTimer()">Start</button>
-<button class="tool" onclick="openAd()">Open Ad</button>
-<button class="tool" id="unlockBtn" disabled>Continue</button>
+<button onclick="startAdTimer()">Start</button>
+<button onclick="openAd()">Open Ad</button>
+<button id="unlockBtn" disabled>Continue</button>
 </div>
 
 </div>
 
-<h2>Latest Articles</h2>
-<div id="articles"></div>
-
 </div>
 
-<!-- ADMIN PANEL -->
-<div id="admin" class="admin-panel">
-<h3>Admin Login</h3>
-<input type="password" id="adminpass" placeholder="Password">
-<button onclick="login()">Login</button>
-
-<div id="admincontent" style="display:none;">
-<h3>Add Article</h3>
-<input type="text" id="title" placeholder="Title">
-<textarea id="content" placeholder="Content"></textarea>
-<button onclick="addArticle()">Publish</button>
-</div>
-</div>
-
-<p id="visitor"></p>
-
-</div>
-
-<!-- 🔥 DIRECT LINK AD BUTTON -->
+<!-- 🔥 DIRECT LINK AD -->
 <div class="ad-box">
 <a href="https://www.effectivegatecpm.com/tf7ue455r?key=905a97bdf8c5cacc589679acb64b13ef" target="_blank">
-<button class="tool">Sponsored Link</button>
+<button>Sponsored Link</button>
 </a>
 </div>
 
-<!-- 🔥 STICKY BOTTOM AD -->
-<div class="sticky-ad">
-<script src="https://pl28764018.effectivegatecpm.com/db/ae/86/dbae860c34bd2584045c04e858a7885b.js"></script>
-</div>
+<footer>
+Developer: Amir Hamza
+</footer>
 
 <div class="social">
 <a href="#">Telegram</a>
@@ -157,47 +126,35 @@ atOptions = {
 <a href="#">Instagram</a>
 </div>
 
-<footer>
-Developer: Amir Hamza
-</footer>
-
 <script>
-// Dark Mode
-function toggleDark(){document.body.classList.toggle("dark");}
-
-// Visitor
-let visits=localStorage.getItem("visits")||0;
-visits++;localStorage.setItem("visits",visits);
-document.getElementById("visitor").innerText="Visitors: "+visits;
-
-// Password
 function genPass(){
 let chars="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-let pass="";for(let i=0;i<12;i++){pass+=chars.charAt(Math.floor(Math.random()*chars.length));}
+let pass="";
+for(let i=0;i<12;i++){pass+=chars[Math.floor(Math.random()*chars.length)];}
+pass.innerText="";
 document.getElementById("pass").innerText=pass;
 }
 
-// EMI
 function calcEMI(){
 let P=loan.value,R=rate.value/1200,N=month.value;
 let EMI=(P*R*Math.pow(1+R,N))/(Math.pow(1+R,N)-1);
 document.getElementById("emi").innerText="EMI: "+EMI.toFixed(2);
 }
 
-// QR
-function makeQR(){qr.innerHTML="<img src='https://api.qrserver.com/v1/create-qr-code/?size=120x120&data="+qrtext.value+"'>";}
+function makeQR(){
+qr.innerHTML="<img src='https://api.qrserver.com/v1/create-qr-code/?size=120x120&data="+qrtext.value+"'>";
+}
 
-// Word
 function countWord(){
 let text=wordtext.value.trim();
 let words=text?text.split(/\s+/).length:0;
 wordcount.innerText="Words: "+words;
 }
 
-// Search
-function goSearch(){window.open("https://www.google.com/search?q="+search.value);}
+function goSearch(){
+window.open("https://www.google.com/search?q="+search.value);
+}
 
-// JPG PNG
 function convertPNG(e){
 let file=e.target.files[0];
 let reader=new FileReader();
@@ -205,7 +162,8 @@ reader.onload=function(evt){
 let img=new Image();
 img.onload=function(){
 let canvas=document.createElement("canvas");
-canvas.width=img.width;canvas.height=img.height;
+canvas.width=img.width;
+canvas.height=img.height;
 canvas.getContext("2d").drawImage(img,0,0);
 downloadPNG.href=canvas.toDataURL("image/png");
 downloadPNG.download="converted.png";
@@ -216,41 +174,22 @@ img.src=evt.target.result;
 reader.readAsDataURL(file);
 }
 
-// Admin
-function showAdmin(){admin.style.display="block";}
-function showTools(){admin.style.display="none";}
-function login(){
-if(adminpass.value==="1234"){admincontent.style.display="block";alert("Login Success");}
-else{alert("Wrong Password");}
-}
-function addArticle(){
-let articles=JSON.parse(localStorage.getItem("articles"))||[];
-articles.push({title:title.value,content:content.value});
-localStorage.setItem("articles",JSON.stringify(articles));
-loadArticles();alert("Published");
-}
-function loadArticles(){
-let articles=JSON.parse(localStorage.getItem("articles"))||[];
-let html="";
-articles.forEach(a=>{html+="<div class='card'><h4>"+a.title+"</h4><p>"+a.content+"</p></div>";});
-articlesDiv=document.getElementById("articles");
-articlesDiv.innerHTML=html;
-}
-loadArticles();
-
-// Ad Timer
 let adTime=10;
 function startAdTimer(){
 let countdown=setInterval(function(){
 adTime--;
 adTimer.innerText="Wait "+adTime+" sec";
-if(adTime<=0){clearInterval(countdown);unlockBtn.disabled=false;adTimer.innerText="Unlocked";}
+if(adTime<=0){
+clearInterval(countdown);
+unlockBtn.disabled=false;
+adTimer.innerText="Unlocked";
+}
 },1000);
 }
-function openAd(){window.open("https://www.effectivegatecpm.com/tf7ue455r?key=905a97bdf8c5cacc589679acb64b13ef");}
 
-// Auto Refresh
-setInterval(()=>{location.reload();},60000);
+function openAd(){
+window.open("https://www.effectivegatecpm.com/tf7ue455r?key=905a97bdf8c5cacc589679acb64b13ef");
+}
 </script>
 
 </body>
