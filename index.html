@@ -1,39 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amir Tools - Free Online Tools & Converters</title>
-
-<!-- SEO -->
-<meta name="description" content="Free online tools: Image to PDF, JPG to PNG, QR Generator, EMI Calculator, Age Calculator, Word Counter and more.">
-<meta name="keywords" content="online tools, image to pdf, jpg to png, qr generator, emi calculator, free converter">
-<meta name="author" content="Amir Hamza">
-<meta name="robots" content="index, follow">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<title>Amir Hamza Tools Hub</title>
 
 <style>
-body{margin:0;font-family:Arial;background:#0f172a;color:white}
-header{background:#111827;padding:18px;text-align:center;font-size:22px;font-weight:bold}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:15px;padding:20px}
-.card{background:#1f2937;padding:20px;border-radius:14px;text-align:center;cursor:pointer;transition:.3s}
-.card:hover{background:#374151;transform:translateY(-4px)}
-.card i{font-size:28px;margin-bottom:8px;color:#22d3ee}
-.section{display:none;padding:20px}
-input,textarea,button{width:100%;max-width:500px;padding:10px;margin:6px 0;border:none;border-radius:8px}
-button{background:#22d3ee;color:black;font-weight:bold;cursor:pointer}
-footer{text-align:center;padding:15px;background:#111827;margin-top:20px}
-.ad{text-align:center;margin:15px 0}
-img{max-width:100%}
+body{margin:0;font-family:Segoe UI;background:#f4f6f9;transition:0.3s;}
+header{background:#0f172a;color:white;padding:15px;text-align:center;font-size:22px;}
+.nav{display:flex;justify-content:center;gap:10px;background:#1e293b;padding:10px;}
+.nav button{background:#2563eb;color:white;border:none;padding:8px 12px;border-radius:5px;}
+.container{padding:20px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px;}
+.card{background:white;padding:15px;border-radius:10px;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,0.1);}
+input,textarea{width:100%;padding:8px;margin:6px 0;border-radius:6px;border:1px solid #ccc;}
+button.tool{background:#2563eb;color:white;border:none;padding:8px;border-radius:6px;}
+footer{background:#0f172a;color:white;text-align:center;padding:15px;margin-top:30px;}
+.dark{background:#111;color:white;}
+.dark .card{background:#1e1e1e;color:white;}
+.social{position:fixed;right:10px;top:40%;}
+.social a{display:block;background:#2563eb;color:white;padding:8px;margin:5px 0;text-decoration:none;border-radius:5px;font-size:14px;}
+.sticky-ad{position:fixed;bottom:0;width:100%;background:white;text-align:center;z-index:999;}
+.admin-panel{display:none;background:white;padding:15px;border-radius:10px;margin-top:20px;}
+.ad-box{text-align:center;margin:15px;}
 </style>
 </head>
+
 <body>
 
-<header>🚀 Amir Tools - Free Online Tools</header>
+<header>
+Amir Hamza Premium Tools Hub
+<button onclick="toggleDark()" style="float:right;">🌙</button>
+</header>
 
-<!-- TOP HIGH CPM AD -->
-<div class="ad">
+<div class="nav">
+<button onclick="showTools()">Tools</button>
+<button onclick="showAdmin()">Admin</button>
+</div>
+
+<div class="container">
+
+<!-- 🔥 YOUR TOP BANNER AD -->
+<div class="ad-box">
 <script>
 atOptions = {
 'key' : '2c315d711f36c4e1708a3dda9be62807',
@@ -46,118 +54,203 @@ atOptions = {
 <script src="https://www.highperformanceformat.com/2c315d711f36c4e1708a3dda9be62807/invoke.js"></script>
 </div>
 
-<div class="grid">
-<div class="card" onclick="show('pass')"><i class="fa fa-key"></i><br>Password Generator</div>
-<div class="card" onclick="show('age')"><i class="fa fa-calendar"></i><br>Age Calculator</div>
-<div class="card" onclick="show('emi')"><i class="fa fa-calculator"></i><br>EMI Calculator</div>
-<div class="card" onclick="show('qr')"><i class="fa fa-qrcode"></i><br>QR Generator</div>
-<div class="card" onclick="show('word')"><i class="fa fa-font"></i><br>Word Counter</div>
-<div class="card" onclick="show('thumb')"><i class="fa fa-youtube"></i><br>YT Thumbnail</div>
-</div>
-
-<!-- MIDDLE AD -->
-<div class="ad">
-<script async data-cfasync="false" src="https://pl28764021.effectivegatecpm.com/0b4ca3dfc0212eeea234d78044b2e089/invoke.js"></script>
+<!-- 🔥 NATIVE AD -->
+<script async="async" data-cfasync="false" src="https://pl28764021.effectivegatecpm.com/0b4ca3dfc0212eeea234d78044b2e089/invoke.js"></script>
 <div id="container-0b4ca3dfc0212eeea234d78044b2e089"></div>
+
+<div id="tools-section">
+
+<h2>Online Tools</h2>
+
+<div class="grid">
+
+<div class="card">
+<h4>Password Generator</h4>
+<button class="tool" onclick="genPass()">Generate</button>
+<p id="pass"></p>
 </div>
 
-<!-- TOOLS -->
-
-<div id="pass" class="section">
-<h3>Password Generator</h3>
-<button onclick="genPass()">Generate</button>
-<p id="passout"></p>
-</div>
-
-<div id="age" class="section">
-<h3>Age Calculator</h3>
-<input type="date" id="dob">
-<button onclick="calcAge()">Calculate</button>
-<p id="ageout"></p>
-</div>
-
-<div id="emi" class="section">
-<h3>EMI Calculator</h3>
+<div class="card">
+<h4>EMI Calculator</h4>
 <input type="number" id="loan" placeholder="Loan Amount">
-<input type="number" id="rate" placeholder="Interest Rate %">
-<input type="number" id="time" placeholder="Months">
-<button onclick="calcEMI()">Calculate</button>
-<p id="emiout"></p>
+<input type="number" id="rate" placeholder="Interest %">
+<input type="number" id="month" placeholder="Months">
+<button class="tool" onclick="calcEMI()">Calculate</button>
+<p id="emi"></p>
 </div>
 
-<div id="qr" class="section">
-<h3>QR Generator</h3>
-<input type="text" id="qrtext">
-<button onclick="makeQR()">Generate</button>
-<div id="qrout"></div>
+<div class="card">
+<h4>QR Generator</h4>
+<input type="text" id="qrtext" placeholder="Enter Text">
+<button class="tool" onclick="makeQR()">Generate</button>
+<div id="qr"></div>
 </div>
 
-<div id="word" class="section">
-<h3>Word Counter</h3>
-<textarea id="wordinput" oninput="countWord()"></textarea>
-<p id="wordout">Words: 0</p>
+<div class="card">
+<h4>Word Counter</h4>
+<textarea id="wordtext"></textarea>
+<button class="tool" onclick="countWord()">Count</button>
+<p id="wordcount"></p>
 </div>
 
-<div id="thumb" class="section">
-<h3>YouTube Thumbnail</h3>
-<input type="text" id="ytlink">
-<button onclick="getThumb()">Get Thumbnail</button>
-<div id="thumbout"></div>
+<div class="card">
+<h4>Google Search</h4>
+<input type="text" id="search">
+<button class="tool" onclick="goSearch()">Search</button>
 </div>
 
-<footer>Developer: Amir Hamza</footer>
+<div class="card">
+<h4>JPG to PNG</h4>
+<input type="file" accept="image/*" onchange="convertPNG(event)">
+<a id="downloadPNG"></a>
+</div>
 
-<!-- POP ADS -->
+<div class="card">
+<h4>Ad Timer Unlock</h4>
+<p id="adTimer">Click Start</p>
+<button class="tool" onclick="startAdTimer()">Start</button>
+<button class="tool" onclick="openAd()">Open Ad</button>
+<button class="tool" id="unlockBtn" disabled>Continue</button>
+</div>
+
+</div>
+
+<h2>Latest Articles</h2>
+<div id="articles"></div>
+
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="admin" class="admin-panel">
+<h3>Admin Login</h3>
+<input type="password" id="adminpass" placeholder="Password">
+<button onclick="login()">Login</button>
+
+<div id="admincontent" style="display:none;">
+<h3>Add Article</h3>
+<input type="text" id="title" placeholder="Title">
+<textarea id="content" placeholder="Content"></textarea>
+<button onclick="addArticle()">Publish</button>
+</div>
+</div>
+
+<p id="visitor"></p>
+
+</div>
+
+<!-- 🔥 DIRECT LINK AD BUTTON -->
+<div class="ad-box">
+<a href="https://www.effectivegatecpm.com/tf7ue455r?key=905a97bdf8c5cacc589679acb64b13ef" target="_blank">
+<button class="tool">Sponsored Link</button>
+</a>
+</div>
+
+<!-- 🔥 STICKY BOTTOM AD -->
+<div class="sticky-ad">
 <script src="https://pl28764018.effectivegatecpm.com/db/ae/86/dbae860c34bd2584045c04e858a7885b.js"></script>
-<script src="https://pl28764009.effectivegatecpm.com/88/9f/d0/889fd0e78a836626363de1ffb8c7293a.js"></script>
+</div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<div class="social">
+<a href="#">Telegram</a>
+<a href="#">WhatsApp</a>
+<a href="#">Facebook</a>
+<a href="#">Instagram</a>
+</div>
+
+<footer>
+Developer: Amir Hamza
+</footer>
 
 <script>
-function show(id){
-document.querySelectorAll('.section').forEach(s=>s.style.display='none');
-document.getElementById(id).style.display='block';
-}
+// Dark Mode
+function toggleDark(){document.body.classList.toggle("dark");}
 
+// Visitor
+let visits=localStorage.getItem("visits")||0;
+visits++;localStorage.setItem("visits",visits);
+document.getElementById("visitor").innerText="Visitors: "+visits;
+
+// Password
 function genPass(){
-document.getElementById("passout").innerText=Math.random().toString(36).slice(-12);
+let chars="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+let pass="";for(let i=0;i<12;i++){pass+=chars.charAt(Math.floor(Math.random()*chars.length));}
+document.getElementById("pass").innerText=pass;
 }
 
-function calcAge(){
-let dob=new Date(document.getElementById("dob").value);
-let diff=Date.now()-dob.getTime();
-let age=new Date(diff);
-document.getElementById("ageout").innerText=Math.abs(age.getUTCFullYear()-1970)+" Years";
-}
-
+// EMI
 function calcEMI(){
-let P=document.getElementById("loan").value;
-let r=document.getElementById("rate").value/1200;
-let n=document.getElementById("time").value;
-let emi=(P*r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
-document.getElementById("emiout").innerText="EMI: "+emi.toFixed(2);
+let P=loan.value,R=rate.value/1200,N=month.value;
+let EMI=(P*R*Math.pow(1+R,N))/(Math.pow(1+R,N)-1);
+document.getElementById("emi").innerText="EMI: "+EMI.toFixed(2);
 }
 
-function makeQR(){
-document.getElementById("qrout").innerHTML="";
-new QRCode(document.getElementById("qrout"),document.getElementById("qrtext").value);
-}
+// QR
+function makeQR(){qr.innerHTML="<img src='https://api.qrserver.com/v1/create-qr-code/?size=120x120&data="+qrtext.value+"'>";}
 
+// Word
 function countWord(){
-let text=document.getElementById("wordinput").value.trim();
+let text=wordtext.value.trim();
 let words=text?text.split(/\s+/).length:0;
-document.getElementById("wordout").innerText="Words: "+words;
+wordcount.innerText="Words: "+words;
 }
 
-function getThumb(){
-let url=document.getElementById("ytlink").value;
-let id=url.split("v=")[1];
-if(id){
-id=id.split("&")[0];
-let img="https://img.youtube.com/vi/"+id+"/maxresdefault.jpg";
-document.getElementById("thumbout").innerHTML="<img src='"+img+"'><br><a href='"+img+"' download><button>Download</button></a>";
+// Search
+function goSearch(){window.open("https://www.google.com/search?q="+search.value);}
+
+// JPG PNG
+function convertPNG(e){
+let file=e.target.files[0];
+let reader=new FileReader();
+reader.onload=function(evt){
+let img=new Image();
+img.onload=function(){
+let canvas=document.createElement("canvas");
+canvas.width=img.width;canvas.height=img.height;
+canvas.getContext("2d").drawImage(img,0,0);
+downloadPNG.href=canvas.toDataURL("image/png");
+downloadPNG.download="converted.png";
+downloadPNG.innerText="Download PNG";
+};
+img.src=evt.target.result;
+};
+reader.readAsDataURL(file);
 }
+
+// Admin
+function showAdmin(){admin.style.display="block";}
+function showTools(){admin.style.display="none";}
+function login(){
+if(adminpass.value==="1234"){admincontent.style.display="block";alert("Login Success");}
+else{alert("Wrong Password");}
 }
+function addArticle(){
+let articles=JSON.parse(localStorage.getItem("articles"))||[];
+articles.push({title:title.value,content:content.value});
+localStorage.setItem("articles",JSON.stringify(articles));
+loadArticles();alert("Published");
+}
+function loadArticles(){
+let articles=JSON.parse(localStorage.getItem("articles"))||[];
+let html="";
+articles.forEach(a=>{html+="<div class='card'><h4>"+a.title+"</h4><p>"+a.content+"</p></div>";});
+articlesDiv=document.getElementById("articles");
+articlesDiv.innerHTML=html;
+}
+loadArticles();
+
+// Ad Timer
+let adTime=10;
+function startAdTimer(){
+let countdown=setInterval(function(){
+adTime--;
+adTimer.innerText="Wait "+adTime+" sec";
+if(adTime<=0){clearInterval(countdown);unlockBtn.disabled=false;adTimer.innerText="Unlocked";}
+},1000);
+}
+function openAd(){window.open("https://www.effectivegatecpm.com/tf7ue455r?key=905a97bdf8c5cacc589679acb64b13ef");}
+
+// Auto Refresh
+setInterval(()=>{location.reload();},60000);
 </script>
 
 </body>
