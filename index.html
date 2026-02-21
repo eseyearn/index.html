@@ -3,301 +3,135 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pro Online Tools</title>
+<title>Free Online Tools - All in One</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <style>
-body{font-family:Arial;margin:0;background:#f4f6f9}
-header{background:#111;color:white;padding:15px;text-align:center}
-section{background:white;margin:15px;padding:15px;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,.05)}
-h2{margin-top:0}
-button{padding:8px 12px;background:#111;color:white;border:none;border-radius:5px;margin-top:5px}
-input,textarea{width:100%;padding:8px;margin-top:5px}
-video,audio{width:100%;margin-top:10px}
+body{font-family:Poppins,sans-serif;margin:0;background:#0f172a;color:white}
+header{background:#111827;padding:15px;text-align:center;font-size:22px;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:15px;padding:20px}
+.card{background:#1e293b;padding:20px;border-radius:12px;text-align:center;cursor:pointer;transition:.3s}
+.card:hover{background:#334155}
+.section{display:none;padding:20px}
+input,textarea,button{width:100%;padding:10px;margin-top:10px;border:none;border-radius:8px}
+button{background:#2563eb;color:white;font-weight:600;cursor:pointer}
+.ad{background:#1e293b;text-align:center;padding:20px;margin:10px}
 canvas{max-width:100%}
+footer{text-align:center;padding:20px;background:#111827;margin-top:20px}
 </style>
 </head>
 <body>
 
-<header>
-<h1>All-in-One Pro Tools</h1>
-</header>
+<header>All In One Free Online Tools</header>
+
+<div class="ad">
+<!-- Paste Adsterra Ad Code Here -->
+Advertisement Space
+</div>
+
+<div class="grid">
+<div class="card" onclick="show('imgpdf')">Image to PDF</div>
+<div class="card" onclick="show('imgconvert')">JPG to PNG</div>
+<div class="card" onclick="show('password')">Password Generator</div>
+<div class="card" onclick="show('qr')">QR Generator</div>
+<div class="card" onclick="show('age')">Age Calculator</div>
+<div class="card" onclick="show('emi')">EMI Calculator</div>
+<div class="card" onclick="show('word')">Word Counter</div>
+<div class="card" onclick="show('tts')">Text to Speech</div>
+<div class="card" onclick="show('yt')">YouTube Thumbnail</div>
+<div class="card" onclick="show('video')">Video Audio Preview</div>
+</div>
 
 <!-- Image to PDF -->
-<section>
+<div id="imgpdf" class="section">
 <h2>Image to PDF</h2>
-<input type="file" id="imgPdf" accept="image/*">
-<button onclick="convertToPDF()">Convert</button>
-</section>
+<input type="file" id="imgFile">
+<button onclick="convertPDF()">Convert & Download</button>
+</div>
 
 <!-- JPG to PNG -->
-<section>
+<div id="imgconvert" class="section">
 <h2>JPG to PNG</h2>
-<input type="file" id="jpgInput" accept="image/jpeg">
-<button onclick="jpgToPng()">Convert</button>
-<canvas id="pngCanvas"></canvas>
-</section>
+<input type="file" id="imgInput">
+<button onclick="convertPNG()">Convert</button>
+<canvas id="canvas"></canvas>
+</div>
 
-<!-- Password Generator -->
-<section>
+<!-- Password -->
+<div id="password" class="section">
 <h2>Password Generator</h2>
-<input type="number" id="passLength" placeholder="Length">
+<input type="number" id="passLength" placeholder="Length (8-20)">
 <button onclick="generatePass()">Generate</button>
-<input type="text" id="passwordResult">
-</section>
+<input type="text" id="passOutput" readonly>
+</div>
 
-<!-- QR Generator -->
-<section>
-<h2>QR Code Generator</h2>
-<input type="text" id="qrText" placeholder="Enter text">
+<!-- QR -->
+<div id="qr" class="section">
+<h2>QR Generator</h2>
+<input type="text" id="qrText" placeholder="Enter text or link">
 <button onclick="generateQR()">Generate</button>
-<div id="qrCode"></div>
-</section>
+<div id="qrcode"></div>
+</div>
 
-<!-- Age Calculator -->
-<section>
+<!-- Age -->
+<div id="age" class="section">
 <h2>Age Calculator</h2>
-<input type="date" id="dob" onchange="calcAge()">
-<p id="ageResult"></p>
-</section>
+<input type="date" id="birth">
+<button onclick="calcAge()">Calculate</button>
+<input type="text" id="ageResult" readonly>
+</div>
 
-<!-- EMI Calculator -->
-<section>
+<!-- EMI -->
+<div id="emi" class="section">
 <h2>EMI Calculator</h2>
 <input type="number" id="loan" placeholder="Loan Amount">
-<input type="number" id="rate" placeholder="Interest %">
-<input type="number" id="months" placeholder="Months">
+<input type="number" id="rate" placeholder="Interest Rate %">
+<input type="number" id="years" placeholder="Years">
 <button onclick="calcEMI()">Calculate</button>
-<p id="emiResult"></p>
-</section>
+<input type="text" id="emiResult" readonly>
+</div>
 
-<!-- Word Counter -->
-<section>
+<!-- Word -->
+<div id="word" class="section">
 <h2>Word Counter</h2>
-<textarea id="textInput" oninput="countWords()"></textarea>
-<p id="wordResult"></p>
-</section>
+<textarea id="text" rows="5"></textarea>
+<input type="text" id="wordResult" readonly>
+</div>
 
-<!-- Text to Speech -->
-<section>
+<!-- TTS -->
+<div id="tts" class="section">
 <h2>Text to Speech</h2>
-<textarea id="ttsText"></textarea>
-<button onclick="speakText()">Speak</button>
-</section>
-
-<!-- YouTube Thumbnail -->
-<section>
-<h2>YouTube Thumbnail Downloader</h2>
-<input type="text" id="ytUrl" placeholder="Paste YouTube URL">
-<button onclick="getThumbnail()">Get Thumbnail</button>
-<img id="thumbnailImg" width="100%">
-</section>
-
-<!-- Video to Audio -->
-<section>
-<h2>Video to Audio Converter</h2>
-<input type="file" id="videoInput" accept="video/*">
-<button onclick="extractAudio()">Extract Audio</button>
-<audio id="audioOutput" controls></audio>
-</section>
-
-<script>
-
-// Image to PDF
-function convertToPDF(){
-const { jsPDF } = window.jspdf;
-const file=document.getElementById('imgPdf').files[0];
-const reader=new FileReader();
-reader.onload=function(e){
-const pdf=new jsPDF();
-pdf.addImage(e.target.result,'JPEG',10,10,180,160);
-pdf.save("converted.pdf");
-}
-reader.readAsDataURL(file);
-}
-
-// JPG to PNG
-function jpgToPng(){
-const file=document.getElementById('jpgInput').files[0];
-const reader=new FileReader();
-reader.onload=function(e){
-const img=new Image();
-img.onload=function(){
-const canvas=document.getElementById('pngCanvas');
-canvas.width=img.width;
-canvas.height=img.height;
-const ctx=canvas.getContext('2d');
-ctx.drawImage(img,0,0);
-}
-img.src=e.target.result;
-}
-reader.readAsDataURL(file);
-}
-
-// Password
-function generatePass(){
-const length=document.getElementById('passLength').value;
-const chars="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%";
-let pass="";
-for(let i=0;i<length;i++){
-pass+=chars.charAt(Math.floor(Math.random()*chars.length));
-}
-document.getElementById('passwordResult').value=pass;
-}
-
-// QR
-function generateQR(){
-document.getElementById("qrCode").innerHTML="";
-new QRCode(document.getElementById("qrCode"), document.getElementById("qrText").value);
-}
-
-// Age
-function calcAge(){
-const dob=new Date(document.getElementById('dob').value);
-const diff=Date.now()-dob.getTime();
-const age=new Date(diff);
-document.getElementById('ageResult').innerText="Age: "+Math.abs(age.getUTCFullYear()-1970)+" years";
-}
-
-// EMI
-function calcEMI(){
-let P=document.getElementById('loan').value;
-let r=document.getElementById('rate').value/1200;
-let n=document.getElementById('months').value;
-let emi=(P*r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
-document.getElementById('emiResult').innerText="EMI: "+emi.toFixed(2);
-}
-
-// Word Counter
-function countWords(){
-let text=document.getElementById('textInput').value;
-let words=text.trim().split(/\s+/).filter(Boolean).length;
-document.getElementById('wordResult').innerText="Words: "+words;
-}
-
-// Text to Speech
-function speakText(){
-let msg=new SpeechSynthesisUtterance(document.getElementById('ttsText').value);
-speechSynthesis.speak(msg);
-}
-
-// YouTube Thumbnail
-function getThumbnail(){
-let url=document.getElementById('ytUrl').value;
-let id=url.split("v=")[1];
-document.getElementById('thumbnailImg').src="https://img.youtube.com/vi/"+id+"/maxresdefault.jpg";
-}
-
-// Video to Audio
-function extractAudio(){
-let file=document.getElementById('videoInput').files[0];
-let audio=document.getElementById('audioOutput');
-audio.src=URL.createObjectURL(file);
-}
-
-</script>
-
-</body>
-
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pro Multi Tools Converter</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<style>
-body{font-family:Arial;background:#111;color:#fff;margin:0;padding:0}
-header{background:#000;padding:15px;text-align:center;font-size:22px;font-weight:bold}
-section{padding:20px;border-bottom:1px solid #333}
-button{padding:8px 15px;margin-top:5px;background:#00c853;border:none;color:#fff;cursor:pointer}
-input,textarea{padding:6px;margin-top:5px;width:100%}
-canvas{max-width:100%}
-</style>
-</head>
-<body>
-
-<header>🔥 Pro Multi Tools Converter</header>
-
-<!-- Image to PDF -->
-<section>
-<h3>Image to PDF</h3>
-<input type="file" id="imgPDF">
-<button onclick="convertPDF()">Convert</button>
-</section>
-
-<!-- JPG to PNG -->
-<section>
-<h3>JPG to PNG</h3>
-<input type="file" id="jpgInput">
-<button onclick="convertPNG()">Convert</button>
-<canvas id="pngCanvas"></canvas>
-</section>
-
-<!-- Password Generator -->
-<section>
-<h3>Password Generator</h3>
-<button onclick="genPass()">Generate</button>
-<p id="pass"></p>
-</section>
-
-<!-- QR Code -->
-<section>
-<h3>QR Code Generator</h3>
-<input type="text" id="qrText">
-<div id="qrcode"></div>
-<button onclick="makeQR()">Generate</button>
-</section>
-
-<!-- Age Calculator -->
-<section>
-<h3>Age Calculator</h3>
-<input type="date" id="dob">
-<button onclick="calcAge()">Calculate</button>
-<p id="ageResult"></p>
-</section>
-
-<!-- EMI Calculator -->
-<section>
-<h3>EMI Calculator</h3>
-<input type="number" id="loan" placeholder="Loan Amount">
-<input type="number" id="rate" placeholder="Interest %">
-<input type="number" id="months" placeholder="Months">
-<button onclick="calcEMI()">Calculate</button>
-<p id="emiResult"></p>
-</section>
-
-<!-- Word Counter -->
-<section>
-<h3>Word Counter</h3>
-<textarea id="textArea"></textarea>
-<button onclick="countWord()">Count</button>
-<p id="wordResult"></p>
-</section>
-
-<!-- Text to Speech -->
-<section>
-<h3>Text to Speech</h3>
-<textarea id="ttsText"></textarea>
+<textarea id="ttsText" rows="4"></textarea>
 <button onclick="speak()">Speak</button>
-</section>
+</div>
 
-<!-- Video to Audio -->
-<section>
-<h3>Video to Audio Converter</h3>
-<input type="file" id="videoInput" accept="video/*">
-<button onclick="extractAudio()">Convert to Audio</button>
-<audio id="audioOutput" controls></audio>
-</section>
+<!-- YT -->
+<div id="yt" class="section">
+<h2>YouTube Thumbnail</h2>
+<input type="text" id="ytLink" placeholder="Paste YouTube Link">
+<button onclick="getThumb()">Get Thumbnail</button>
+<img id="ytImg" style="width:100%;margin-top:10px;">
+</div>
+
+<!-- Video -->
+<div id="video" class="section">
+<h2>Video Audio Preview</h2>
+<input type="file" id="videoFile">
+<video id="videoPreview" controls style="width:100%;margin-top:10px;"></video>
+</div>
+
+<footer>© 2026 Free Online Tools</footer>
 
 <script>
-// Image to PDF
-function convertPDF(){
+function show(id){
+document.querySelectorAll('.section').forEach(s=>s.style.display='none');
+document.getElementById(id).style.display='block';
+}
+
+async function convertPDF(){
 const { jsPDF } = window.jspdf;
-let file=document.getElementById("imgPDF").files[0];
+let file=document.getElementById('imgFile').files[0];
 let reader=new FileReader();
 reader.onload=function(e){
 let pdf=new jsPDF();
@@ -307,74 +141,70 @@ pdf.save("converted.pdf");
 reader.readAsDataURL(file);
 }
 
-// JPG to PNG
 function convertPNG(){
-let file=document.getElementById("jpgInput").files[0];
+let file=document.getElementById('imgInput').files[0];
 let reader=new FileReader();
 reader.onload=function(e){
 let img=new Image();
 img.onload=function(){
-let canvas=document.getElementById("pngCanvas");
-let ctx=canvas.getContext("2d");
+let canvas=document.getElementById('canvas');
 canvas.width=img.width;
 canvas.height=img.height;
-ctx.drawImage(img,0,0);
+canvas.getContext('2d').drawImage(img,0,0);
 }
 img.src=e.target.result;
 }
 reader.readAsDataURL(file);
 }
 
-// Password
-function genPass(){
-let chars="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$";
+function generatePass(){
+let len=document.getElementById('passLength').value||12;
+let chars="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 let pass="";
-for(let i=0;i<12;i++){pass+=chars.charAt(Math.floor(Math.random()*chars.length));}
-document.getElementById("pass").innerText=pass;
+for(let i=0;i<len;i++){pass+=chars[Math.floor(Math.random()*chars.length)]}
+document.getElementById('passOutput').value=pass;
 }
 
-// QR
-function makeQR(){
+function generateQR(){
 document.getElementById("qrcode").innerHTML="";
-new QRCode(document.getElementById("qrcode"),document.getElementById("qrText").value);
+new QRCode(document.getElementById("qrcode"), document.getElementById("qrText").value);
 }
 
-// Age
 function calcAge(){
-let dob=new Date(document.getElementById("dob").value);
-let diff=Date.now()-dob.getTime();
-let age=new Date(diff).getUTCFullYear()-1970;
-document.getElementById("ageResult").innerText="Age: "+age+" Years";
+let birth=new Date(document.getElementById('birth').value);
+let diff=new Date()-birth;
+let age=Math.floor(diff/31557600000);
+document.getElementById('ageResult').value=age+" Years";
 }
 
-// EMI
 function calcEMI(){
-let P=loan.value;
+let p=loan.value;
 let r=rate.value/1200;
-let n=months.value;
-let emi=(P*r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
-document.getElementById("emiResult").innerText="EMI: "+emi.toFixed(2);
+let n=years.value*12;
+let emi=(p*r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
+document.getElementById('emiResult').value="EMI: "+emi.toFixed(2);
 }
 
-// Word Count
-function countWord(){
-let text=document.getElementById("textArea").value;
-let words=text.trim().split(/\s+/).length;
-document.getElementById("wordResult").innerText="Words: "+words;
-}
+document.getElementById("text").addEventListener("input",()=>{
+let words=text.value.trim().split(/\s+/).filter(Boolean).length;
+wordResult.value="Words: "+words;
+});
 
-// TTS
 function speak(){
 let msg=new SpeechSynthesisUtterance(ttsText.value);
 speechSynthesis.speak(msg);
 }
 
-// Video to Audio
-function extractAudio(){
-let file=document.getElementById("videoInput").files[0];
-let audio=document.getElementById("audioOutput");
-audio.src=URL.createObjectURL(file);
+function getThumb(){
+let url=document.getElementById("ytLink").value;
+let id=url.split("v=")[1];
+document.getElementById("ytImg").src="https://img.youtube.com/vi/"+id+"/maxresdefault.jpg";
 }
+
+document.getElementById("videoFile").addEventListener("change",function(e){
+let file=e.target.files[0];
+videoPreview.src=URL.createObjectURL(file);
+});
 </script>
 
 </body>
