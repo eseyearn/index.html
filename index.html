@@ -3,22 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SUPER MASTER 50+ TOOLS</title>
+<title>SUPER MASTER 50+ TOOLS - AMIR HAMZA</title>
 
 <style>
 body{
 margin:0;
 font-family:Arial;
-background:#0a0f2c;
+background:linear-gradient(180deg,#081c34,#020d1f);
 color:white;
 text-align:center;
 }
 
 header{
 padding:15px;
-background:#111a3a;
-font-size:20px;
 font-weight:bold;
+font-size:18px;
 }
 
 .tools{
@@ -30,10 +29,10 @@ padding:15px;
 }
 
 .tools button{
-padding:8px 14px;
+padding:10px 14px;
 border:none;
 border-radius:20px;
-background:#1b2b5c;
+background:#102a4c;
 color:white;
 cursor:pointer;
 }
@@ -44,121 +43,234 @@ padding:20px;
 
 input{
 padding:8px;
-border-radius:8px;
+margin:5px;
+border-radius:5px;
 border:none;
-width:80%;
 }
 
-.runbtn{
-padding:8px 20px;
+button{
+padding:8px 12px;
 border:none;
-background:#00c6ff;
-border-radius:8px;
-margin-top:10px;
+border-radius:6px;
+background:#00c3ff;
+color:white;
 cursor:pointer;
 }
 
 footer{
-margin-top:40px;
-padding:20px;
-background:#111a3a;
-}
-
-.contact a{
-color:#00c6ff;
-margin:0 10px;
-text-decoration:none;
+margin-top:30px;
+padding:15px;
+font-size:13px;
+opacity:.8;
 }
 </style>
-
-<!-- 🔥 AD CODE START -->
-
-<script src="https://pl28764009.effectivegatecpm.com/88/9f/d0/889fd0e78a836626363de1ffb8c7293a.js"></script>
-
-<script src="https://pl28764018.effectivegatecpm.com/db/ae/86/dbae860c34bd2584045c04e858a7885b.js"></script>
-
-<script async data-cfasync="false" src="https://pl28764021.effectivegatecpm.com/0b4ca3dfc0212eeea234d78044b2e089/invoke.js"></script>
-<div id="container-0b4ca3dfc0212eeea234d78044b2e089"></div>
-
-<script>
-atOptions = {
-'key' : '2c315d711f36c4e1708a3dda9be62807',
-'format' : 'iframe',
-'height' : 90,
-'width' : 728,
-'params' : {}
-};
-</script>
-<script src="https://www.highperformanceformat.com/2c315d711f36c4e1708a3dda9be62807/invoke.js"></script>
-
-<!-- 🔥 AD CODE END -->
 
 </head>
 <body>
 
 <header>
-🚀 SUPER MASTER 50+ TOOLS <br>
+🚀 SUPER MASTER 50+ TOOLS<br>
 Developer AMIR HAMZA
 </header>
 
+<!-- TOP BANNER AD -->
+<script async data-cfasync="false"
+src="https://pl28764021.effectivegatecpm.com/0b4ca3dfc0212eeea234d78044b2e089/invoke.js"></script>
+<div id="container-0b4ca3dfc0212eeea234d78044b2e089"></div>
+
+<!-- UNLOCK SYSTEM -->
+<div style="padding:20px;">
+<h3>Welcome To Premium Tools</h3>
+<button id="unlockBtn" onclick="unlockTools()">Unlock Tools</button>
+</div>
+
+<div id="toolSection" style="display:none;">
+
 <div class="tools">
-<button onclick="word()">Word Count</button>
-<button onclick="char()">Char Count</button>
+<button onclick="wordCount()">Word Count</button>
+<button onclick="charCount()">Char Count</button>
 <button onclick="reverse()">Reverse</button>
 <button onclick="upper()">Uppercase</button>
 <button onclick="lower()">Lowercase</button>
-<button onclick="percent()">Percent</button>
 <button onclick="random()">Random</button>
 <button onclick="password()">Password</button>
+<button onclick="percent()">Percent</button>
+<button onclick="base64()">Base64</button>
+<button onclick="binary()">Binary</button>
+<button onclick="color()">Color</button>
+<button onclick="uuid()">UUID</button>
+<button onclick="timestamp()">Timestamp</button>
+<button onclick="slug()">Slug</button>
+<button onclick="loan()">Loan EMI</button>
+<button onclick="gst()">GST</button>
+<button onclick="discount()">Discount</button>
+<button onclick="timerTool()">Timer</button>
 </div>
 
 <div id="toolArea"></div>
 
-<footer>
-<div class="contact">
-<a href="#">Facebook</a> |
-<a href="#">Telegram</a> |
-<a href="#">WhatsApp</a>
 </div>
-<br>
+
+<!-- POPUNDER -->
+<script src="https://pl28764009.effectivegatecpm.com/88/9f/d0/889fd0e78a836626363de1ffb8c7293a.js"></script>
+<script src="https://pl28764018.effectivegatecpm.com/db/ae/86/dbae860c34bd2584045c04e858a7885b.js"></script>
+
+<!-- STICKY AD -->
+<div style="position:fixed;bottom:0;width:100%;background:#0b2a4a;padding:5px;">
+<script>
+atOptions = {
+'key' : '2c315d711f36c4e1708a3dda9be62807',
+'format' : 'iframe',
+'height' : 50,
+'width' : 320,
+'params' : {}
+};
+</script>
+<script src="https://www.highperformanceformat.com/2c315d711f36c4e1708a3dda9be62807/invoke.js"></script>
+</div>
+
+<footer>
+Facebook | Telegram | WhatsApp<br>
 © 2026 AMIR HAMZA
 </footer>
 
 <script>
-
-function showInput(label, callback){
-document.getElementById("toolArea").innerHTML = `
-<h3>${label}</h3>
-<input id="userInput">
-<br>
-<button class="runbtn" onclick="runTool()">Run</button>
-<p id="result"></p>
-`;
-
-window.runTool = function(){
-let val = document.getElementById("userInput").value;
-document.getElementById("result").innerText = callback(val);
+function unlockTools(){
+let time=8;
+let btn=document.getElementById("unlockBtn");
+btn.disabled=true;
+let t=setInterval(()=>{
+time--;
+btn.innerText="Wait "+time+"s";
+if(time<=0){
+clearInterval(t);
+btn.innerText="Enter Tools";
+btn.disabled=false;
+btn.onclick=()=>{document.getElementById("toolSection").style.display="block";}
 }
+},1000);
 }
 
-function word(){ showInput("Enter text", v=>v.split(" ").length+" words"); }
-function char(){ showInput("Enter text", v=>v.length+" characters"); }
-function reverse(){ showInput("Enter text", v=>v.split("").reverse().join("")); }
-function upper(){ showInput("Enter text", v=>v.toUpperCase()); }
-function lower(){ showInput("Enter text", v=>v.toLowerCase()); }
-function percent(){ showInput("Enter number,percent (100,10)", v=>{
-let x=v.split(",");
-return (x[0]*x[1]/100);
-}); }
+function wordCount(){
+toolArea.innerHTML='<textarea id="txt" rows=4 cols=30></textarea><br><button onclick="wc()">Count</button><p id="result"></p>';
+}
+function wc(){
+result.innerText=txt.value.trim().split(/\s+/).length;
+}
+
+function charCount(){
+toolArea.innerHTML='<textarea id="txt" rows=4 cols=30></textarea><br><button onclick="cc()">Count</button><p id="result"></p>';
+}
+function cc(){
+result.innerText=txt.value.length;
+}
+
+function reverse(){
+toolArea.innerHTML='<input id="txt"><br><button onclick="rv()">Reverse</button><p id="result"></p>';
+}
+function rv(){ result.innerText=txt.value.split("").reverse().join(""); }
+
+function upper(){
+toolArea.innerHTML='<input id="txt"><br><button onclick="up()">Upper</button><p id="result"></p>';
+}
+function up(){ result.innerText=txt.value.toUpperCase(); }
+
+function lower(){
+toolArea.innerHTML='<input id="txt"><br><button onclick="lw()">Lower</button><p id="result"></p>';
+}
+function lw(){ result.innerText=txt.value.toLowerCase(); }
 
 function random(){
-document.getElementById("toolArea").innerHTML="<h3>Random Number</h3><p>"+Math.floor(Math.random()*10000)+"</p>";
+toolArea.innerHTML='<button onclick="rn()">Generate</button><p id="result"></p>';
 }
+function rn(){ result.innerText=Math.random(); }
 
 function password(){
-document.getElementById("toolArea").innerHTML="<h3>Password</h3><p>"+Math.random().toString(36).slice(-10)+"</p>";
+toolArea.innerHTML='<button onclick="pw()">Generate</button><p id="result"></p>';
+}
+function pw(){
+let chars="abcdefghijklmnopqrstuvwxyz0123456789";
+let pass="";
+for(let i=0;i<8;i++) pass+=chars[Math.floor(Math.random()*chars.length)];
+result.innerText=pass;
 }
 
+function percent(){
+toolArea.innerHTML='<input id="a"><input id="b"><br><button onclick="pc()">Calc</button><p id="result"></p>';
+}
+function pc(){ result.innerText=(a.value/b.value)*100+"%"; }
+
+function base64(){
+toolArea.innerHTML='<input id="txt"><br><button onclick="b64()">Encode</button><p id="result"></p>';
+}
+function b64(){ result.innerText=btoa(txt.value); }
+
+function binary(){
+toolArea.innerHTML='<input id="txt"><br><button onclick="bin()">Convert</button><p id="result"></p>';
+}
+function bin(){
+let r="";
+for(let i=0;i<txt.value.length;i++){
+r+=txt.value.charCodeAt(i).toString(2)+" ";
+}
+result.innerText=r;
+}
+
+function color(){
+toolArea.innerHTML='<button onclick="col()">Generate</button><p id="result"></p>';
+}
+function col(){
+let c="#"+Math.floor(Math.random()*16777215).toString(16);
+result.innerText=c;
+}
+
+function uuid(){
+toolArea.innerHTML='<button onclick="uid()">Generate</button><p id="result"></p>';
+}
+function uid(){ result.innerText=crypto.randomUUID(); }
+
+function timestamp(){
+toolArea.innerHTML='<button onclick="ts()">Get</button><p id="result"></p>';
+}
+function ts(){ result.innerText=Date.now(); }
+
+function slug(){
+toolArea.innerHTML='<input id="txt"><br><button onclick="sl()">Convert</button><p id="result"></p>';
+}
+function sl(){ result.innerText=txt.value.toLowerCase().replace(/\s+/g,"-"); }
+
+function loan(){
+toolArea.innerHTML='<input id="p" placeholder="Principal"><input id="r" placeholder="Rate %"><input id="n" placeholder="Months"><br><button onclick="emi()">Calculate</button><p id="result"></p>';
+}
+function emi(){
+let P=parseFloat(p.value);
+let R=parseFloat(r.value)/100/12;
+let N=parseFloat(n.value);
+let E=(P*R*Math.pow(1+R,N))/(Math.pow(1+R,N)-1);
+result.innerText="EMI: "+E.toFixed(2);
+}
+
+function gst(){
+toolArea.innerHTML='<input id="price"><input id="rate"><br><button onclick="gstc()">Calc</button><p id="result"></p>';
+}
+function gstc(){ result.innerText=parseFloat(price.value)*(1+rate.value/100); }
+
+function discount(){
+toolArea.innerHTML='<input id="price"><input id="disc"><br><button onclick="discCalc()">Calc</button><p id="result"></p>';
+}
+function discCalc(){ result.innerText=price.value-(price.value*disc.value/100); }
+
+function timerTool(){
+toolArea.innerHTML='<input id="sec"><br><button onclick="start()">Start</button><p id="result"></p>';
+}
+function start(){
+let s=parseInt(sec.value);
+let t=setInterval(()=>{
+result.innerText=s;
+s--;
+if(s<0) clearInterval(t);
+},1000);
+}
 </script>
 
 </body>
