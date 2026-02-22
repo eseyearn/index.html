@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SUPER MASTER TOOLS - ULTIMATE</title>
+<title>🚀 SUPER MASTER 50+ TOOLS</title>
 
 <style>
 body{
@@ -16,164 +16,206 @@ header{
 padding:15px;
 background:#111827;
 font-weight:bold;
-}
-.page{
-display:none;
-padding:20px;
-}
-.active{
-display:block;
+font-size:18px;
 }
 .grid{
 display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:12px;
-margin-top:20px;
-}
-.card{
-background:#1e293b;
+grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+gap:10px;
 padding:15px;
+}
+.tool{
+background:#1e293b;
+padding:10px;
 border-radius:12px;
+font-size:13px;
 cursor:pointer;
 }
-button{
-padding:10px 20px;
-border:none;
-border-radius:8px;
-background:#00c6ff;
-color:white;
-margin-top:10px;
-}
-.adbox{
-margin:15px 0;
-padding:15px;
-background:#111827;
-border-radius:10px;
-}
-.stickyAd{
+.tool:hover{background:#334155;}
+.adbox{margin:15px auto;}
+.sticky{
 position:fixed;
 bottom:0;
-left:0;
 width:100%;
 background:#111827;
-padding:10px;
+padding:5px;
 z-index:999;
 }
-footer{
-margin-top:60px;
-padding:15px;
-background:#111827;
+.social a{
+display:inline-block;
+margin:5px;
+padding:6px 15px;
+background:#1e293b;
+color:#00c6ff;
+border-radius:20px;
+text-decoration:none;
 font-size:13px;
 }
-.social a{
-color:#00c6ff;
-margin:0 5px;
-text-decoration:none;
+footer{
+margin-top:40px;
+padding:20px;
+background:#111827;
+font-size:13px;
 }
 </style>
 </head>
 <body>
 
 <header>
-🚀 SUPER MASTER 50+ TOOLS  
-<br>Developer AMIR HAMZA
+🚀 SUPER MASTER 50+ TOOLS <br>
+Developer AMIR HAMZA
 </header>
 
-<!-- HOME PAGE -->
-<div id="home" class="page active">
-
+<!-- TOP BANNER AD -->
 <div class="adbox">
-<script> atOptions = {'key':'2c315d711f36c4e1708a3dda9be62807','format':'iframe','height':90,'width':728,'params':{}};</script>
+<script>
+atOptions = {
+'key':'2c315d711f36c4e1708a3dda9be62807',
+'format':'iframe',
+'height':90,
+'width':320,
+'params':{}
+};
+</script>
 <script src="https://www.highperformanceformat.com/2c315d711f36c4e1708a3dda9be62807/invoke.js"></script>
 </div>
 
-<h2>Welcome To Premium Tools</h2>
-<button onclick="showPage('tools')">Enter Tools</button>
-
-</div>
-
-<!-- TOOLS PAGE -->
-<div id="tools" class="page">
-
-<div class="adbox">
-<script async="async" data-cfasync="false" src="https://pl28764021.effectivegatecpm.com/0b4ca3dfc0212eeea234d78044b2e089/invoke.js"></script>
-<div id="container-0b4ca3dfc0212eeea234d78044b2e089"></div>
-</div>
-
-<h2>Choose Tool</h2>
-
 <div class="grid">
-<div class="card" onclick="triggerReward()">Calculator</div>
-<div class="card" onclick="triggerReward()">Password</div>
-<div class="card" onclick="triggerReward()">Word Counter</div>
-<div class="card" onclick="triggerReward()">Random</div>
+
+<div class="tool" onclick="calc()">Calculator</div>
+<div class="tool" onclick="age()">Age</div>
+<div class="tool" onclick="bmi()">BMI</div>
+<div class="tool" onclick="emi()">EMI</div>
+<div class="tool" onclick="percent()">Percent</div>
+<div class="tool" onclick="discount()">Discount</div>
+<div class="tool" onclick="word()">Word Count</div>
+<div class="tool" onclick="char()">Char Count</div>
+<div class="tool" onclick="reverse()">Reverse</div>
+<div class="tool" onclick="upper()">Uppercase</div>
+<div class="tool" onclick="lower()">Lowercase</div>
+<div class="tool" onclick="slug()">Slug</div>
+<div class="tool" onclick="base64()">Base64</div>
+<div class="tool" onclick="uuid()">UUID</div>
+<div class="tool" onclick="timestamp()">Timestamp</div>
+<div class="tool" onclick="random()">Random</div>
+<div class="tool" onclick="password()">Password</div>
+<div class="tool" onclick="color()">Color</div>
+<div class="tool" onclick="binary()">Binary</div>
+<div class="tool" onclick="timer()">Timer</div>
+<div class="tool" onclick="stopwatch()">Stopwatch</div>
+
 </div>
 
-<br>
-<button onclick="showPage('home')">⬅ Back</button>
-
-</div>
-
-<!-- REWARD PAGE -->
-<div id="reward" class="page">
-
-<div class="adbox">
+<!-- NATIVE AD -->
 <script src="https://pl28764018.effectivegatecpm.com/db/ae/86/dbae860c34bd2584045c04e858a7885b.js"></script>
-</div>
-
-<h3 id="timer">Click Start</h3>
-<button onclick="startTimer()">Start Timer</button>
-
-<br><br>
-<button onclick="showPage('tools')">⬅ Back</button>
-
-</div>
 
 <!-- STICKY FOOTER AD -->
-<div class="stickyAd">
+<div class="sticky">
 <script src="https://pl28764009.effectivegatecpm.com/88/9f/d0/889fd0e78a836626363de1ffb8c7293a.js"></script>
 </div>
 
 <footer>
-
 <div class="social">
-<a href="#">Facebook</a> |
-<a href="#">Telegram</a> |
+<a href="#">Facebook</a>
+<a href="#">Telegram</a>
 <a href="#">WhatsApp</a>
 </div>
-
 <br>© 2026 AMIR HAMZA
-
 </footer>
 
 <script>
 
-function showPage(id){
-document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-document.getElementById(id).classList.add('active');
-window.scrollTo(0,0);
-}
-
-/* Pop Trigger Once */
-function triggerReward(){
-showPage('reward');
-if(!localStorage.getItem("popShown")){
-localStorage.setItem("popShown","yes");
+// POPUNDER ONCE
+if(!sessionStorage.getItem("pop")){
+sessionStorage.setItem("pop","1");
 window.open("https://www.effectivegatecpm.com/tf7ue455r?key=905a97bdf8c5cacc589679acb64b13ef");
 }
-}
 
-let time=8;
-function startTimer(){
-time=8;
-let interval=setInterval(function(){
-document.getElementById("timer").innerText="Wait "+time+" sec";
-time--;
-if(time<0){
-clearInterval(interval);
-document.getElementById("timer").innerText="Unlocked ✅";
+function calc(){
+let a=prompt("Enter expression (e.g 5+5)");
+alert(eval(a));
 }
-},1000);
+function age(){
+let y=prompt("Enter birth year");
+alert("Age: "+(new Date().getFullYear()-y));
+}
+function bmi(){
+let w=prompt("Weight (kg)");
+let h=prompt("Height (m)");
+alert("BMI: "+(w/(h*h)).toFixed(2));
+}
+function emi(){
+let p=prompt("Loan amount");
+let r=prompt("Interest %");
+let n=prompt("Months");
+r=r/1200;
+alert("EMI: "+((p*r)/(1-Math.pow(1+r,-n))).toFixed(2));
+}
+function percent(){
+let n=prompt("Number");
+let p=prompt("Percent");
+alert((n*p)/100);
+}
+function discount(){
+let price=prompt("Price");
+let d=prompt("Discount %");
+alert(price-(price*d/100));
+}
+function word(){
+let t=prompt("Enter text");
+alert(t.split(" ").length);
+}
+function char(){
+let t=prompt("Enter text");
+alert(t.length);
+}
+function reverse(){
+let t=prompt("Enter text");
+alert(t.split("").reverse().join(""));
+}
+function upper(){
+let t=prompt("Enter text");
+alert(t.toUpperCase());
+}
+function lower(){
+let t=prompt("Enter text");
+alert(t.toLowerCase());
+}
+function slug(){
+let t=prompt("Enter text");
+alert(t.toLowerCase().replace(/\s+/g,"-"));
+}
+function base64(){
+let t=prompt("Enter text");
+alert(btoa(t));
+}
+function uuid(){
+alert(crypto.randomUUID());
+}
+function timestamp(){
+alert(Date.now());
+}
+function random(){
+alert(Math.floor(Math.random()*10000));
+}
+function password(){
+alert(Math.random().toString(36).slice(-8));
+}
+function color(){
+alert("#"+Math.floor(Math.random()*16777215).toString(16));
+}
+function binary(){
+let t=prompt("Enter text");
+alert([...t].map(c=>c.charCodeAt(0).toString(2)).join(" "));
+}
+function timer(){
+alert("Timer started 5 sec");
+setTimeout(()=>alert("Time up"),5000);
+}
+function stopwatch(){
+let start=Date.now();
+alert("Press OK to stop");
+alert("Time: "+((Date.now()-start)/1000)+" sec");
 }
 
 </script>
